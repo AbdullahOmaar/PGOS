@@ -21,6 +21,6 @@ jobs:
       - name: Validate core synthetic project records
         run: python scripts/validate_records.py examples/sample-project
       - name: Validate extended synthetic adoption records
-        run: python -m scripts.validate_extended_records examples/extended-adoption
+        run: python -m scripts.extended_records examples/extended-adoption
       - name: Run validator unit tests
         run: python -m unittest discover -s tests -v

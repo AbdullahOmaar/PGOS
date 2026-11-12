@@ -29,7 +29,7 @@ See [`docs/governance/authority-model.md`](docs/governance/authority-model.md).
 - `docs/architecture/` — reusable architecture decision record standard.
 - `templates/` — machine-readable JSON starter records, including Project, WorkOrder, Decision, ChangeRequest, Handoff, Risk, Evidence, Incident and Release.
 - `scripts/validate_records.py` — dependency-free core record and cross-reference validator.
-- `scripts/extended_records.py` and `scripts/validate_extended_records.py` — preflight validation for ChangeRequest, Handoff and Incident records, including identity-state, approval-state, timeline and cross-reference checks.
+- `scripts/extended_records.py` — extended ChangeRequest, Handoff and Incident preflight validator and CLI, including identity-state, approval-state, timeline and cross-reference checks.
 - `tests/` — unit and synthetic adoption tests.
 - `examples/` — synthetic project profiles and extended governance records.
 
@@ -39,7 +39,7 @@ Requires Python 3.10+; no third-party package is required.
 
 ```bash
 python scripts/validate_records.py examples/sample-project
-python -m scripts.validate_extended_records examples/extended-adoption
+python -m scripts.extended_records examples/extended-adoption
 python -m unittest discover -s tests -v
 ```
 
