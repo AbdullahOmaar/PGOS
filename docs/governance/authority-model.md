@@ -1,6 +1,6 @@
 # Authority & Source-of-Truth Model
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.0 | **Class:** CONTROLLED
 
 | Information class | Canonical authority | Downstream references |
 | --- | --- | --- |
@@ -12,6 +12,19 @@
 | Approvals and exceptions | Notion approval/decision records | Linear/GitHub carry reference IDs |
 | Deployment and runtime | Actual runtime provider | GitHub release and Notion evidence links |
 | Database schema and live data state | Owning database/provider | GitHub migration and Notion change record |
+
+## Human Owner authority channel
+
+A project may explicitly map its human Project Owner to an authenticated conversation channel through a canonical Owner decision. Once that mapping is recorded, the human sending messages in that established authenticated Owner conversation is treated as the Project Owner for conversational instructions and decisions. A separate PGOS account, password, token or manually supplied session ID is not required solely to recognize the mapped Owner.
+
+Record the governing decision and available conversation source/date. Do not claim that PGOS independently verified a stable platform session ID, cryptographic signature or signed principal assertion unless the platform actually exposes such evidence. Shared/ambiguous accounts, forwarded messages without provenance, conflicting project context and unbound channels remain UNKNOWN.
+
+## Separate principals
+
+- **Human Project Owner:** supplies scope decisions and approvals through the mapped Owner channel.
+- **AI/agent/worker runtime:** a separate principal. Runtime identity, assignment, dispatch, acknowledgement and handoff require independent evidence; an Owner message does not prove a worker exists or has acknowledged.
+- **Connected-tool account:** GitHub, Notion, Linear, database and other integrations use separate linked identities. Verify the actual connected principal and permission for each operation. Owner authority in chat does not grant provider permissions.
+- **Application actor:** application users and tenant membership must be authenticated and authorized at the server-side application boundary.
 
 ## Selection rules
 1. Identify the information class before choosing a source.
@@ -29,3 +42,5 @@
 - Do not copy secrets, personal data or full sensitive logs into governance records.
 
 Evidence is stale when its commit, artifact, configuration, environment, test scope, permission model or source decision changes materially.
+
+**Decision reference:** [DEC-PGOS-001 — Chat-Based Owner Authority & Principal Separation](https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f) — approved for the identity principle only.
