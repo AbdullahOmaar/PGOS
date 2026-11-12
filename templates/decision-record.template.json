@@ -1,0 +1,5 @@
+{
+ "record_type":"Decision","id":"DEC-EXAMPLE-001","project_id":"PRJ-EXAMPLE","revision":1,"title":"Decision title","status":"PROPOSED",
+ "context":"Describe the problem and decision drivers.","options":["Option A","Option B","Do nothing"],"decision":"State selected option or leave blank while proposed.",
+ "rationale":"Explain why.","owner_id":"owner@example.invalid","approver_ids":[],"effective_at":null
+}
