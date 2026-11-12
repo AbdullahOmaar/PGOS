@@ -1,0 +1,5 @@
+{
+ "record_type":"Release","id":"REL-EXAMPLE-001","project_id":"PRJ-EXAMPLE","work_order_ids":["WO-EXAMPLE-001"],"status":"NOT_READY",
+ "exact_revision":"replace-with-commit-sha-or-artifact-digest","environment":"staging","checks":[{"id":"CHK-01","result":"NOT_RUN"}],
+ "rollback_plan":"Describe tested rollback/restore.","release_authority_id":"release-authority@example.invalid"
+}
