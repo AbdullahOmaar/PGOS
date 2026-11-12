@@ -19,7 +19,7 @@ PGOS is a new standalone framework. It does not inherit approvals, policies, rec
 | GitHub | Source code, engineering standards, ADRs, branches, commits, PRs, reviews, tests, CI and release artefacts |
 | Runtime providers | Actual deployment, infrastructure, database and production-state evidence |
 
-See [`docs/governance/authority-model.md`](docs/governance/authority-model.md).
+See [docs/governance/authority-model.md](docs/governance/authority-model.md).
 
 ## Package contents
 
@@ -58,10 +58,16 @@ The sample projects are synthetic and intentionally contain no real customer dat
 9. Obtain action-specific release approval before production or external side effects.
 10. Record acceptance, residual risks, handoff and closeout.
 
+## Identity and approval boundary
+
+A project may map its human Project Owner to an authenticated conversation channel through a canonical governance decision. The sender in that established Owner conversation may then provide attributable Owner instructions without a separate PGOS account, password, token or manual session ID. This is conversational attribution, not a cryptographic signature or a stable session identifier that PGOS can independently verify unless the platform exposes such evidence.
+
+The AI/worker runtime identity and each connected tool account remain separate principals. Their identities and permissions must be checked through their own runtime/provider evidence. A chat Owner instruction does not grant provider permissions or blanket A4 authority.
+
 ## Important limitations
 
 - The validators check record structure and selected governance invariants. They are not a policy engine, identity provider, access-control gateway, cryptographic signature verifier, or proof of tool configuration.
-- The extended-record validator checks handoff identity flags and approval-state consistency as record data only; it does not authenticate the named actors.
+- The extended-record validator checks handoff identity flags and approval-state consistency as record data only; it does not authenticate the named actors or the human author of a chat instruction.
 - Repository branch protection, required checks, secret scanning, permissions, and deployment gates must be configured and tested in the provider.
 - A JSON record marked `APPROVED` is only a claim unless the approval reference is verifiable in the project's canonical approval system.
 - PGOS remains DRAFT until independently reviewed and explicitly adopted by its Owner.
@@ -69,7 +75,8 @@ The sample projects are synthetic and intentionally contain no real customer dat
 ## Governance links
 
 - Notion canonical root: https://app.notion.com/p/4169320b90fb81eda52cd8fd8915faa3
+- Owner identity decision: https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f
 - Linear project: https://linear.app/3a-agent/project/pgos-project-governance-os-v010-2ec77b5f295f
 - Linear foundation issue: https://linear.app/3a-agent/issue/3A-223/complete-pgos-foundation-v010
 
-These links are the current PGOS workspace references; they do not imply approval or successful provider enforcement.
+These links are the current PGOS workspace references; they do not imply overall project approval or successful provider enforcement.
