@@ -1,0 +1,6 @@
+{
+ "record_type":"Evidence","id":"EVD-EXAMPLE-001","project_id":"PRJ-EXAMPLE","work_order_id":"WO-EXAMPLE-001",
+ "criterion_ids":["AC-01"],"exact_revision":"replace-with-commit-sha-or-artifact-digest","environment":"test",
+ "scope":"Describe precisely what was checked.","procedure":"Command or manual steps.","result":"NOT_RUN",
+ "producer_id":"verifier@example.invalid","timestamp":"2026-11-12T00:00:00Z"
+}
