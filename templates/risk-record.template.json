@@ -1,0 +1,4 @@
+{
+ "record_type":"Risk","id":"RSK-EXAMPLE-001","project_id":"PRJ-EXAMPLE","title":"Risk title","description":"Describe cause, event and consequence.",
+ "likelihood":2,"impact":2,"inherent_score":4,"mitigations":["Describe mitigation"],"owner_id":"owner@example.invalid","status":"OPEN"
+}
