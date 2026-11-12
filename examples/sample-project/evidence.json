@@ -1,0 +1,8 @@
+{
+  "record_type":"Evidence","id":"EVD-SAMPLE-001","project_id":"PRJ-SAMPLE-001","work_order_id":"WO-SAMPLE-001",
+  "criterion_ids":["AC-SAMPLE-01"],"source_url":"https://example.invalid/evidence/NOT_RUN","exact_revision":"sample-commit-sha-not-yet-created",
+  "environment":"local","scope":"Synthetic example only; no actual application test has been executed.",
+  "procedure":"No command executed. This record demonstrates the NOT_RUN state only.","result":"NOT_RUN",
+  "producer_id":"verifier-sample","reviewer_id":null,"timestamp":"2026-11-12T00:00:00Z",
+  "invalidation_triggers":["Source revision changes","Test environment changes"]
+}
