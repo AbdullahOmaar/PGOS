@@ -19,7 +19,7 @@ PGOS is a new standalone framework. It does not inherit approvals, policies, rec
 | GitHub | Source code, engineering standards, ADRs, branches, commits, PRs, reviews, tests, CI and release artefacts |
 | Runtime providers | Actual deployment, infrastructure, database and production-state evidence |
 
-See [docs/governance/authority-model.md](docs/governance/authority-model.md).
+See [`docs/governance/authority-model.md`](docs/governance/authority-model.md).
 
 ## Package contents
 
