@@ -1,0 +1,9 @@
+{
+  "record_type":"Project","id":"PRJ-SAMPLE-001","name":"Cedar Library Booking (Synthetic)","revision":1,"status":"GOVERNANCE_SETUP",
+  "owner":{"id":"owner-sample","name":"Synthetic Owner","verified":true},"problem":"A small library needs a simple reservation workflow.",
+  "outcomes":["Members can reserve a book and receive a visible confirmation."],"success_metrics":["At least 95% of valid reservation attempts complete successfully in acceptance testing."],
+  "scope":["Book search","Reservation request","Reservation confirmation"],"non_goals":["Payments","Production email or SMS","Legacy data migration"],
+  "risk_tier":"LOW","data_classes":["INTERNAL"],
+  "canonical_sources":{"notion":"https://example.invalid/notion/project-charter","linear":"https://example.invalid/linear/project","github":"https://example.invalid/github/repository","runtime":"NOT_APPLICABLE"},
+  "governance_profile_version":"0.1.0","approved_deviations":[],"created_at":"2026-11-12T00:00:00Z","review_date":"2026-12-12"
+}
