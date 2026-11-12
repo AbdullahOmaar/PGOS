@@ -3,7 +3,7 @@
 PGOS is a governance framework and validator, not a hosted security service.
 
 ## Reporting
-Do not publish credentials, personal data, customer records, exploit payloads containing live targets, or sensitive logs in public issues. For this private repository, report a suspected vulnerability directly to the repository Owner through an approved private channel.
+Do not publish credentials, personal data, customer records, exploit payloads containing live targets, or sensitive logs in public issues. This repository is currently public. Report a suspected vulnerability directly to the repository Owner through an approved private channel; do not disclose sensitive details in a public issue.
 
 Include affected version/revision, impact, safe reproduction steps, and mitigations. Avoid destructive testing.
 
