@@ -1,0 +1,11 @@
+{
+  "record_type":"WorkOrder","id":"WO-SAMPLE-001","project_id":"PRJ-SAMPLE-001","outcome_id":"OUT-SAMPLE-001","revision":1,
+  "title":"Create reservation confirmation view","status":"DRAFT","objective":"Provide a clear reservation confirmation view for valid book reservations.",
+  "scope":["Confirmation state view","Empty and error states"],"non_goals":["External notification","Payment"],"owner_id":"owner-sample",
+  "assignee":{"id":"implementer-sample","verified":true},
+  "permission":{"level":"A2","actions":["read_project_docs","edit_feature_code","run_local_tests"],"resources":["src/reservations/**","tests/reservations/**"],"environment":"local","expires_at":"2026-12-01T00:00:00Z","approval_ref":"DEC-SAMPLE-001"},
+  "dependencies":[],"decision_refs":["DEC-SAMPLE-001"],
+  "acceptance_criteria":[{"id":"AC-SAMPLE-01","given":"A valid reservation was created","when":"The member opens the confirmation view","then":"The reservation identifier and current status are visible","evidence_required":"Automated UI test and reviewer screenshot"}],
+  "verification_plan":{"checks":["Unit tests","Reservation UI test","Manual accessibility review"],"verifier_id":"verifier-sample"},
+  "risk_tier":"LOW","rollback_plan":"Revert the feature branch; no persistent data mutation is included.","created_at":"2026-11-12T00:00:00Z"
+}
