@@ -1,0 +1,8 @@
+{
+ "record_type":"WorkOrder","id":"WO-EXAMPLE-001","project_id":"PRJ-EXAMPLE","revision":1,"title":"Implement one approved outcome","status":"DRAFT",
+ "objective":"State the outcome and measurable value.","scope":["Explicit in-scope item"],"non_goals":["Explicitly excluded item"],
+ "owner_id":"owner@example.invalid","assignee":{"id":"agent-or-user-id","verified":false},
+ "permission":{"level":"A1","actions":["read_project_docs"],"resources":["docs/**"],"environment":"local","expires_at":"2026-11-20T00:00:00Z","approval_ref":"NOT_REQUIRED_FOR_A1"},
+ "acceptance_criteria":[{"id":"AC-01","given":"The required context exists","when":"The action is performed","then":"The expected result is observable","evidence_required":"Test or review reference"}],
+ "verification_plan":{"checks":["Describe checks"],"verifier_id":"verifier@example.invalid"},"risk_tier":"LOW"
+}
