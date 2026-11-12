@@ -1,0 +1,8 @@
+{
+ "record_type":"Project","id":"PRJ-EXAMPLE","name":"Example Project","revision":1,"status":"GOVERNANCE_SETUP",
+ "owner":{"id":"owner@example.invalid","name":"Project Owner","verified":false},"problem":"Describe the user or business problem.",
+ "outcomes":["Describe measurable outcomes."],"scope":["In-scope capability"],"non_goals":["Explicitly excluded capability"],
+ "risk_tier":"MODERATE","data_classes":["INTERNAL"],
+ "canonical_sources":{"notion":"NOT_APPLICABLE","linear":"NOT_APPLICABLE","github":"NOT_APPLICABLE","runtime":"NOT_APPLICABLE"},
+ "created_at":"2026-11-12T00:00:00Z","review_date":"2026-12-12"
+}
