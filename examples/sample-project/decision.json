@@ -1,0 +1,9 @@
+{
+  "record_type":"Decision","id":"DEC-SAMPLE-001","project_id":"PRJ-SAMPLE-001","revision":1,
+  "title":"Keep reservation confirmation in the application","status":"PROPOSED",
+  "context":"The MVP requires a confirmation state but excludes external notifications.",
+  "options":["In-app confirmation","Email notification","Do nothing"],"decision":"In-app confirmation",
+  "rationale":"It satisfies the MVP outcome without introducing an external side effect.",
+  "consequences":["No email provider required","Members need to revisit the app to view status"],
+  "risk_refs":[],"owner_id":"owner-sample","approver_ids":[],"effective_at":null,"review_date":"2026-12-12","supersedes":null
+}
