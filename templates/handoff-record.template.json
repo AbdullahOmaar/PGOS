@@ -1,0 +1,32 @@
+{
+  "record_type": "Handoff",
+  "id": "HOF-EXAMPLE-001",
+  "project_id": "PRJ-EXAMPLE",
+  "work_order_id": "WO-EXAMPLE-001",
+  "revision": 1,
+  "status": "DRAFT",
+  "from_identity": {
+    "id": "from-actor-id",
+    "verified": false
+  },
+  "to_identity": {
+    "id": "to-actor-id",
+    "verified": false
+  },
+  "scope_summary": "What is being handed off?",
+  "acceptance_status": "NOT_ACCEPTED",
+  "notion_url": "NOT_APPLICABLE",
+  "linear_url": "NOT_APPLICABLE",
+  "github_url": "NOT_APPLICABLE",
+  "branch": "NOT_CREATED",
+  "base_sha": "NOT_CREATED",
+  "head_sha": "NOT_CREATED",
+  "changed_files": [],
+  "tests": [],
+  "review_ci_runtime_evidence": [],
+  "not_run_checks": [],
+  "blockers": [],
+  "remaining_work": [],
+  "next_action": "Next authorized action",
+  "created_at": "2026-11-12T00:00:00Z"
+}

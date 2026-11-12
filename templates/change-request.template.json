@@ -1,0 +1,31 @@
+{
+  "record_type": "ChangeRequest",
+  "id": "CHG-EXAMPLE-001",
+  "project_id": "PRJ-EXAMPLE",
+  "revision": 1,
+  "title": "Change title",
+  "status": "PROPOSED",
+  "trigger": "Describe trigger",
+  "reason": "Why is change needed?",
+  "current_state": "Describe current state",
+  "proposed_state": "Describe proposed state",
+  "scope_impact": "Describe scope impact",
+  "timeline_impact": "Describe timeline impact",
+  "budget_impact": "Describe budget impact",
+  "technical_impact": "Architecture/API/contract impact",
+  "data_impact": "Data impact",
+  "security_impact": "Security impact",
+  "privacy_impact": "Privacy impact",
+  "migration_plan": "Migration or NOT_APPLICABLE",
+  "compatibility_plan": "Compatibility approach",
+  "rollback_plan": "Rollback/compensation approach",
+  "test_evidence_impact": "Tests/evidence to add or invalidate",
+  "risk_classification": "MODERATE",
+  "required_approvers": [
+    "owner@example.invalid"
+  ],
+  "decision_ref": null,
+  "effective_version": null,
+  "expires_at": null,
+  "follow_up": "Review date/action"
+}

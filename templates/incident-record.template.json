@@ -1,0 +1,26 @@
+{
+  "record_type": "Incident",
+  "id": "INC-EXAMPLE-001",
+  "project_id": "PRJ-EXAMPLE",
+  "revision": 1,
+  "severity": "MODERATE",
+  "status": "OPEN",
+  "start_at": "2026-11-12T00:00:00Z",
+  "detected_at": "2026-11-12T00:05:00Z",
+  "contained_at": null,
+  "resolved_at": null,
+  "affected_scope": [
+    "Describe affected scope, avoid unnecessary personal data"
+  ],
+  "affected_data": [
+    "INTERNAL"
+  ],
+  "detection": "How detected",
+  "impact": "Observed impact",
+  "containment": "Containment actions",
+  "recovery": "Recovery status",
+  "root_cause": null,
+  "owner_id": "incident-owner@example.invalid",
+  "evidence_refs": [],
+  "follow_up_actions": []
+}

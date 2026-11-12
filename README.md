@@ -27,10 +27,11 @@ See [`docs/governance/authority-model.md`](docs/governance/authority-model.md).
 - `docs/security/` — risk, identity, data classification and security baseline.
 - `docs/release/` — release gates, rollback and live verification.
 - `docs/architecture/` — reusable architecture decision record standard.
-- `templates/` — machine-readable JSON starter records.
-- `scripts/validate_records.py` — dependency-free record and cross-reference validator.
+- `templates/` — machine-readable JSON starter records, including Project, WorkOrder, Decision, ChangeRequest, Handoff, Risk, Evidence, Incident and Release.
+- `scripts/validate_records.py` — dependency-free core record and cross-reference validator.
+- `scripts/extended_records.py` and `scripts/validate_extended_records.py` — preflight validation for ChangeRequest, Handoff and Incident records, including identity-state, approval-state, timeline and cross-reference checks.
 - `tests/` — unit and synthetic adoption tests.
-- `examples/` — a small synthetic project profile.
+- `examples/` — synthetic project profiles and extended governance records.
 
 ## Quick start
 
@@ -38,10 +39,11 @@ Requires Python 3.10+; no third-party package is required.
 
 ```bash
 python scripts/validate_records.py examples/sample-project
+python -m scripts.validate_extended_records examples/extended-adoption
 python -m unittest discover -s tests -v
 ```
 
-The sample project is synthetic and intentionally contains no real customer data, credentials, or production identifiers.
+The sample projects are synthetic and intentionally contain no real customer data, credentials, or production identifiers.
 
 ## Project adoption sequence
 
@@ -58,7 +60,8 @@ The sample project is synthetic and intentionally contains no real customer data
 
 ## Important limitations
 
-- The validator checks record structure and selected governance invariants. It is not a policy engine, identity provider, access-control gateway, cryptographic signature verifier, or proof of tool configuration.
+- The validators check record structure and selected governance invariants. They are not a policy engine, identity provider, access-control gateway, cryptographic signature verifier, or proof of tool configuration.
+- The extended-record validator checks handoff identity flags and approval-state consistency as record data only; it does not authenticate the named actors.
 - Repository branch protection, required checks, secret scanning, permissions, and deployment gates must be configured and tested in the provider.
 - A JSON record marked `APPROVED` is only a claim unless the approval reference is verifiable in the project's canonical approval system.
 - PGOS remains DRAFT until independently reviewed and explicitly adopted by its Owner.
@@ -69,4 +72,4 @@ The sample project is synthetic and intentionally contains no real customer data
 - Linear project: https://linear.app/3a-agent/project/pgos-project-governance-os-v010-2ec77b5f295f
 - Linear foundation issue: https://linear.app/3a-agent/issue/3A-223/complete-pgos-foundation-v010
 
-These links are the current PGOS workspace references; they do not imply approval or successful GitHub publication.
+These links are the current PGOS workspace references; they do not imply approval or successful provider enforcement.

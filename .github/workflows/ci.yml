@@ -18,7 +18,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Validate synthetic project records
+      - name: Validate core synthetic project records
         run: python scripts/validate_records.py examples/sample-project
+      - name: Validate extended synthetic adoption records
+        run: python -m scripts.validate_extended_records examples/extended-adoption
       - name: Run validator unit tests
         run: python -m unittest discover -s tests -v

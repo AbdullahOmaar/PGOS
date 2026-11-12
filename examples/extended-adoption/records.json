@@ -1,0 +1,195 @@
+[
+  {
+    "record_type": "Project",
+    "id": "PRJ-EXT-001",
+    "name": "Maple Archive Checkout (Synthetic)",
+    "revision": 1,
+    "status": "GOVERNANCE_SETUP",
+    "owner": {
+      "id": "owner-ext",
+      "verified": false
+    },
+    "problem": "A small archive needs a controlled checkout process.",
+    "outcomes": [
+      "Archive staff can track an item checkout."
+    ],
+    "scope": [
+      "Checkout request",
+      "Return tracking"
+    ],
+    "non_goals": [
+      "Payments",
+      "External notifications"
+    ],
+    "risk_tier": "LOW",
+    "data_classes": [
+      "INTERNAL"
+    ],
+    "canonical_sources": {
+      "notion": "NOT_APPLICABLE",
+      "linear": "NOT_APPLICABLE",
+      "github": "NOT_APPLICABLE",
+      "runtime": "NOT_APPLICABLE"
+    }
+  },
+  {
+    "record_type": "WorkOrder",
+    "id": "WO-EXT-001",
+    "project_id": "PRJ-EXT-001",
+    "revision": 1,
+    "title": "Add checkout status",
+    "status": "DRAFT",
+    "objective": "Record checkout status.",
+    "scope": [
+      "Status field"
+    ],
+    "non_goals": [
+      "Migration"
+    ],
+    "owner_id": "owner-ext",
+    "assignee": {
+      "id": "implementer-ext",
+      "verified": false
+    },
+    "permission": {
+      "level": "A1",
+      "actions": [
+        "read_project_docs"
+      ],
+      "resources": [
+        "docs/**"
+      ],
+      "environment": "local",
+      "expires_at": "2026-12-01T00:00:00Z",
+      "approval_ref": "NOT_REQUIRED_FOR_A1"
+    },
+    "acceptance_criteria": [
+      {
+        "id": "AC-EXT-01",
+        "given": "An item exists",
+        "when": "Checkout is requested",
+        "then": "Status is visible",
+        "evidence_required": "Test"
+      }
+    ],
+    "verification_plan": {
+      "checks": [
+        "Unit"
+      ],
+      "verifier_id": "verifier-ext"
+    },
+    "risk_tier": "LOW"
+  },
+  {
+    "record_type": "Decision",
+    "id": "DEC-EXT-001",
+    "project_id": "PRJ-EXT-001",
+    "revision": 1,
+    "title": "Keep checkout status in app",
+    "status": "PROPOSED",
+    "context": "Synthetic test",
+    "options": [
+      "In-app",
+      "Email",
+      "Do nothing"
+    ],
+    "decision": "In-app",
+    "rationale": "No external side effect.",
+    "owner_id": "owner-ext",
+    "approver_ids": []
+  },
+  {
+    "record_type": "ChangeRequest",
+    "id": "CHG-EXT-001",
+    "project_id": "PRJ-EXT-001",
+    "revision": 1,
+    "title": "Add return reminder",
+    "status": "PROPOSED",
+    "trigger": "User feedback",
+    "reason": "Clarify due dates",
+    "current_state": "No visible due date",
+    "proposed_state": "Show due date in the item record",
+    "scope_impact": "Adds a due-date field",
+    "timeline_impact": "Small",
+    "budget_impact": "None",
+    "technical_impact": "UI and API contract",
+    "data_impact": "Adds non-sensitive date metadata",
+    "security_impact": "No auth change",
+    "privacy_impact": "No personal data expansion",
+    "migration_plan": "Not applicable to synthetic fixture",
+    "compatibility_plan": "Backward compatible",
+    "rollback_plan": "Revert the view and schema change before adoption",
+    "test_evidence_impact": "Add validation and UI tests",
+    "risk_classification": "LOW",
+    "required_approvers": [
+      "owner-ext"
+    ],
+    "decision_ref": null,
+    "effective_version": null,
+    "expires_at": null,
+    "follow_up": "Review after synthetic acceptance"
+  },
+  {
+    "record_type": "Handoff",
+    "id": "HOF-EXT-001",
+    "project_id": "PRJ-EXT-001",
+    "work_order_id": "WO-EXT-001",
+    "revision": 1,
+    "status": "DRAFT",
+    "from_identity": {
+      "id": "implementer-ext",
+      "verified": false
+    },
+    "to_identity": {
+      "id": "verifier-ext",
+      "verified": false
+    },
+    "scope_summary": "Draft handoff for checkout status",
+    "acceptance_status": "NOT_ACCEPTED",
+    "notion_url": "NOT_APPLICABLE",
+    "linear_url": "NOT_APPLICABLE",
+    "github_url": "NOT_APPLICABLE",
+    "branch": "NOT_CREATED",
+    "base_sha": "NOT_CREATED",
+    "head_sha": "NOT_CREATED",
+    "changed_files": [],
+    "tests": [],
+    "review_ci_runtime_evidence": [],
+    "not_run_checks": [
+      "All execution checks"
+    ],
+    "blockers": [
+      "Work Order is DRAFT"
+    ],
+    "remaining_work": [
+      "Obtain approved Work Order",
+      "Implement feature"
+    ],
+    "next_action": "Do not implement until authorization is approved",
+    "created_at": "2026-11-12T00:00:00Z"
+  },
+  {
+    "record_type": "Incident",
+    "id": "INC-EXT-001",
+    "project_id": "PRJ-EXT-001",
+    "revision": 1,
+    "severity": "LOW",
+    "status": "OPEN",
+    "start_at": "2026-11-12T00:00:00Z",
+    "detected_at": "2026-11-12T00:05:00Z",
+    "affected_scope": [
+      "Synthetic checkout test fixture"
+    ],
+    "affected_data": [
+      "INTERNAL"
+    ],
+    "detection": "Synthetic test event",
+    "impact": "No live users or data affected",
+    "containment": "No external system touched",
+    "recovery": "Not yet resolved",
+    "owner_id": "owner-ext",
+    "contained_at": null,
+    "resolved_at": null,
+    "root_cause": null
+  }
+]
