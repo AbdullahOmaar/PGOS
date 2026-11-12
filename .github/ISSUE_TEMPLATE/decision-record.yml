@@ -1,0 +1,35 @@
+name: Decision record link
+description: Track a material architecture, scope, data, security or delivery decision.
+title: "[DEC-ID] "
+labels: []
+body:
+  - type: input
+    id: project_id
+    attributes:
+      label: Project ID
+    validations:
+      required: true
+  - type: input
+    id: decision_url
+    attributes:
+      label: Canonical Notion Decision URL
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and options
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Scope, security, data, migration and rollback impact
+    validations:
+      required: true
+  - type: input
+    id: approver
+    attributes:
+      label: Decision owner / approver reference
+    validations:
+      required: true
