@@ -22,4 +22,10 @@ Approval must identify the exact action, resource, environment, scope and validi
 | Major | Scope, API, schema, architecture, access or breaking change | Decision + impact analysis + migration/rollback + Owner approval |
 | High impact | Production, privacy/security, financial/legal or irreversible effect | Action-specific approval, independent verification and release controls |
 
-Controlled/security/architecture policy changes require independent review by a non-author and explicit Owner approval before adoption.
+## Controlled policy review
+
+Controlled, security and architecture policy changes normally require a non-author review and explicit Owner approval before adoption, unless a scoped canonical Owner decision establishes an alternative review method.
+
+For the PGOS governance-document package only, [DEC-PGOS-003](https://app.notion.com/p/4179320b90fb81b88be4fcdaf4154618) authorizes a documented Project Master / maintainer self-review as the review method. The self-review is exact-candidate and must record changed paths, diff size, review criteria, findings and dispositions, and final result. Owner approval remains separate from the self-review.
+
+This exception does not waive independent verification or designated security/privacy/release review for high-impact operational changes. It does not bypass provider-enforced branch/PR rules or permit self-approval of A4 actions.

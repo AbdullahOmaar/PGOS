@@ -38,4 +38,8 @@ Batch around coherent results. One accountable owner and one primary writer per 
 
 Linear Done or a merged PR is not by itself outcome acceptance or deployment verification.
 
-**Decision reference:** [DEC-PGOS-001 — Chat-Based Owner Authority & Principal Separation](https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f) — approved for the identity principle only.
+## Review method for PGOS governance records
+
+For PGOS governance-document work only, the verification plan may name Project Master / maintainer self-review under [DEC-PGOS-003](https://app.notion.com/p/4179320b90fb81b88be4fcdaf4154618) instead of a separate Independent Verifier. The review record must be tied to the exact candidate and include paths, criteria, findings/dispositions and result. This does not alter the review requirements for high-impact delivery or external provider gates.
+
+**Owner identity decision:** [DEC-PGOS-001](https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f).
