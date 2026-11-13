@@ -4,14 +4,24 @@
 **Repository:** `AbdullahOmaar/PGOS`  
 **Visibility:** PUBLIC  
 **Default branch:** `main`  
-**Exact main revision observed:** `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`  
-**Disposition:** PARTIAL — current-tree scan and exact-main CI/CodeQL passed; fresh provider alert inventories and runtime authorization evidence remain unavailable
+**Latest main revision observed:** `ee9dda40c635470050c1bb73bc378edf59c1192a`  
+**Disposition:** PARTIAL — exact-main CI/CodeQL passed at the latest observed revision; the full bounded secret scan below is historical at `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`; fresh provider alert inventories and runtime authorization evidence remain unavailable
 
-This page records a bounded provider-state snapshot. It is not a security certification, penetration test, complete secret-history scan, or proof that PGOS enforces authorization at runtime.
+This page records bounded provider-state snapshots. It is not a security certification, penetration test, complete secret-history scan, or proof that PGOS enforces authorization at runtime. Unless stated otherwise, the detailed full-tree/history scan evidence below is the snapshot captured at `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`, not a newly completed scan of the latest main revision.
 
-## Verified GitHub branch ruleset
+## Latest main checkpoint — 2026-11-13
 
-Ruleset [27170450](https://github.com/AbdullahOmaar/PGOS/rules/27170450), **PGOS main — Pull Request and CI Enforcement**, was read back as active for `refs/heads/main` at the evidence revision.
+- Latest main SHA observed: `ee9dda40c635470050c1bb73bc378edf59c1192a`, the squash-merge commit for PR #5.
+- Exact-SHA GitHub Actions `validate` check: SUCCESS, run [43369912822](https://github.com/AbdullahOmaar/PGOS/actions/runs/43369912822).
+- Exact-SHA CodeQL `Analyze (python)` check: SUCCESS, run [43369912837](https://github.com/AbdullahOmaar/PGOS/actions/runs/43369912837).
+- Ruleset [27170450](https://github.com/AbdullahOmaar/PGOS/rules/27170450) read back active for `refs/heads/main`; required `validate` check with strict up-to-date policy, linear history, no non-fast-forward, no deletion, no bypass actors, and no bypass for the connected principal.
+- Current ruleset readback reports required approving reviews = 0, latest-push approval = false, and review-thread resolution = false, matching the Project Owner's explicit direction to keep GitHub PR reviewer gates removed. This does not waive separate independent verification, security/privacy review, or Release Authority for high-impact operational work.
+- Fresh Secret Scanning, Push Protection, Code Scanning and Dependabot settings/alert-inventory readbacks remain unavailable through the connected GitHub endpoint surface. Their current provider state and alert counts are **NOT VERIFIED**.
+- The latest 44/44 full-tree retrieval/secret-pattern scan was not completed at this latest SHA in the current checkpoint. Do not carry forward the historical zero-match scan as a fresh scan of `ee9dda40c635470050c1bb73bc378edf59c1192a`.
+
+## Verified GitHub branch ruleset — historical provider snapshot
+
+Ruleset [27170450](https://github.com/AbdullahOmaar/PGOS/rules/27170450), **PGOS main — Pull Request and CI Enforcement**, was read back as active for `refs/heads/main` at the evidence revision `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`. The latest readback is summarized above.
 
 Verified rules:
 - Pull requests are required before changes reach `main`.
@@ -29,9 +39,9 @@ The latest ruleset readback reports:
 - `require_code_owner_review: false`
 - `require_extra_approval_for_unattributed_changes: false`
 
-The Project Owner explicitly instructed that GitHub PR reviewer gates remain removed and must not be re-enabled. The current provider readback matches that direction. This is limited to GitHub PR approval/latest-push/review-thread enforcement; it does **not** waive independent verification, security/privacy review, or named Release Authority for high-impact operational work. No provider setting mutation was performed in this evidence capture.
+The Project Owner explicitly instructed that GitHub PR reviewer gates remain removed and must not be re-enabled. This is limited to GitHub PR approval/latest-push/review-thread enforcement; it does **not** waive independent verification, security/privacy review, or named Release Authority for high-impact operational work. No provider setting mutation was performed in this evidence capture.
 
-## Exact-revision automation evidence
+## Exact-revision automation evidence — historical snapshot
 
 At exact main SHA `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`:
 - GitHub Actions validation run [43365868829](https://github.com/AbdullahOmaar/PGOS/actions/runs/43365868829) completed SUCCESS. Its `validate` job completed core synthetic-record validation (4 JSON), extended-record validation (1 JSON), and **20/20 unit tests** successfully.
@@ -39,15 +49,15 @@ At exact main SHA `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`:
 
 These are CI/static-analysis signals, not proof of runtime authorization, complete dependency coverage, or absence of every vulnerability.
 
-## Secret scanning and dependency coverage
+## Secret scanning and dependency coverage — historical snapshot at 33f88e7
 
-- A fresh bounded scan of the exact current main tree retrieved all **44/44 tracked file blobs** as UTF-8 text. The ten documented pattern groups were checked: private-key headers, GitHub tokens, AWS access keys, Google API keys, OpenAI key formats, Slack tokens, Stripe secret-key formats, credential-bearing PostgreSQL/MySQL/MongoDB URIs, literal password/client-secret/access-token/API-key assignments, and JWT-like tokens. Result: **zero matches** across all groups.
+- A bounded scan of the exact main tree at `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff` retrieved all **44/44 tracked file blobs** as UTF-8 text. The ten documented pattern groups were checked: private-key headers, GitHub tokens, AWS access keys, Google API keys, OpenAI key formats, Slack tokens, Stripe secret-key formats, credential-bearing PostgreSQL/MySQL/MongoDB URIs, literal password/client-secret/access-token/API-key assignments, and JWT-like tokens. Result: **zero matches** across all groups.
 - The bounded tree scan does not cover unreachable/dangling Git objects, hidden server-side objects, unenumerated refs/tags, binaries or formats outside the patterns. It is not an absolute guarantee that no secret exists.
 - The recorded reachable-history scan covered 50 commits and 78 changed-file diffs using the same ten bounded pattern groups; zero matches were recorded. It does not cover unreachable objects or unenumerated refs.
 - The last recorded provider readback reported GitHub Secret Scanning and Push Protection enabled with zero open alerts at that checkpoint. A fresh provider-settings and alert-inventory readback was not available in the current connector scope. Current state is therefore **NOT FRESHLY VERIFIED**.
 - The last recorded provider readback had `secret_scanning_non_provider_patterns` disabled. Generic/non-provider-pattern secret coverage is **NOT ESTABLISHED**.
 - Dependabot enablement is Owner-reported, but a fresh provider readback and alert inventory were blocked by the available connector surface. Status: **OWNER-REPORTED / PROVIDER READBACK BLOCKED**.
-- The current repository tree has no supported dependency manifest or lockfile (for example `requirements.txt`, `pyproject.toml`, `package.json`, `poetry.lock`, `Pipfile`, `uv.lock`, `go.mod`, or `Cargo.toml`). A dependency inventory or vulnerability audit cannot be demonstrated from this tree.
+- The repository tree inspected at that checkpoint had no supported dependency manifest or lockfile (for example `requirements.txt`, `pyproject.toml`, `package.json`, `poetry.lock`, `Pipfile`, `uv.lock`, `go.mod`, or `Cargo.toml`). A dependency inventory or vulnerability audit cannot be demonstrated from that tree.
 
 ## Runtime and authorization limitations
 
@@ -58,5 +68,6 @@ The repository validators check record structure and selected invariants. Connec
 1. Obtain supported provider access to re-read Secret Scanning, Push Protection, generic-pattern coverage, Dependabot settings and alert inventories.
 2. Add an appropriate dependency manifest only when the project intentionally adopts runtime dependencies; then enable and verify dependency auditing.
 3. Build or expose a real policy-enforcement runtime and execute negative authorization tests against isolated synthetic data before claiming behavioral governance enforcement.
+4. Complete a fresh bounded tree/history secret-pattern scan against the then-current main SHA before reusing a zero-match result as current evidence.
 
 No provider setting, secret, production record, deployment, or paid resource was changed by this evidence capture.
