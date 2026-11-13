@@ -1,6 +1,6 @@
 # Risk, Security & Data Governance
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.1 | **Class:** CONTROLLED
 
 ## Risk scoring
 Likelihood and impact are each scored 1–5. Inherent score = likelihood × impact. Suggested bands: 1–4 LOW, 5–9 MODERATE, 10–16 HIGH, 17–25 CRITICAL. Legal, safety, security, privacy, financial or irreversible impact may force a higher tier regardless of arithmetic.
