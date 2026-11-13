@@ -37,7 +37,7 @@ Therefore the provider does **not** enforce a human approval or review-thread-re
 
 At `7496cbf08a02f69dcc74360a5e4a8d76d7364851`:
 - GitHub Actions validation run [43363793833](https://github.com/AbdullahOmaar/PGOS/actions/runs/43363793833) completed SUCCESS. Its `validate` job completed checkout, Python setup, core synthetic-record validation, extended-record validation, and unit tests successfully.
-- CodeQL workflow run [43363793618](https://github.com/AbdullahOmaar/PGOS/actions/runs/43363793618) completed SUCCESS on the same revision.
+- CodeQL workflow run [43363793618](https://github.com/AbdullahOmaar/PGOS/actions/runs/43363793618) completed SUCCESS on the same revision. Its `Analyze (python)` job completed checkout, CodeQL initialization and analysis successfully.
 
 These are CI/static-analysis signals, not proof of runtime authorization, complete dependency coverage, or absence of every vulnerability.
 
@@ -45,7 +45,7 @@ These are CI/static-analysis signals, not proof of runtime authorization, comple
 
 - The last recorded provider readback reported GitHub Secret Scanning and Push Protection enabled with zero open alerts at that checkpoint. A fresh provider-settings and alert-inventory readback was not available in the current connector scope. Current state is therefore **NOT FRESHLY VERIFIED**.
 - The last recorded provider readback had `secret_scanning_non_provider_patterns` disabled. Generic/non-provider-pattern secret coverage is **NOT ESTABLISHED**.
-- A previous bounded scan recorded 42 text blobs, 48 reachable main commits and 56 file diffs with zero matches for its documented common-secret patterns. That historical scan is not a fresh scan of this revision and did not cover every ref, unreachable object, binary, or unknown secret format.
+- A fresh read-only scan of all 42 tracked text files in the exact main tree at `7496cbf08a02f69dcc74360a5e4a8d76d7364851` found zero matches for seven bounded pattern groups: PEM private keys, GitHub tokens, AWS access keys, Slack tokens, OpenAI keys, Google API keys and credential-bearing PostgreSQL/MySQL/MongoDB connection URIs. This scan did not inspect Git history, unreachable objects, binaries, external logs, or unknown secret formats; it is not a full secret audit.
 - Dependabot enablement is Owner-reported, but a fresh provider readback and alert inventory were blocked by the available connector surface. Status: **OWNER-REPORTED / PROVIDER READBACK BLOCKED**.
 - The current repository tree has no supported dependency manifest or lockfile (for example `requirements.txt`, `pyproject.toml`, `package.json`, `poetry.lock`, `Pipfile`, `uv.lock`, `go.mod`, or `Cargo.toml`). A dependency inventory or vulnerability audit cannot be demonstrated from this tree.
 
