@@ -32,4 +32,10 @@ Bind every capability to the actor, Work Order ID and approved revision, allowed
 
 A valid Owner instruction may establish a decision or authorize a bounded Work Order; it does not grant blanket permission for undeclared scope or A4 actions. Role assignment never grants merge, production, financial, destructive, or external-communication permission by itself.
 
-**Decision reference:** [DEC-PGOS-001 — Chat-Based Owner Authority & Principal Separation](https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f) (PGOS decision; approved for this identity principle only).
+## Review responsibility
+
+For the PGOS governance-document package only, a documented Project Master / maintainer self-review may satisfy the governance-document review gate under [DEC-PGOS-003 — Master Self-Review for PGOS Governance Package](https://app.notion.com/p/4179320b90fb81b88be4fcdaf4154618). The self-review must identify the exact candidate, changed paths, review criteria, findings/dispositions and result.
+
+This exception does not remove independent verification, security/privacy review, or separate Release Authority requirements for high-impact work, nor does it permit the Project Master to approve their own A4 actions. Provider-enforced review rules remain in force.
+
+**Decision references:** [DEC-PGOS-001](https://app.notion.com/p/4169320b90fb8121a870dfea96b2135f) (Owner identity) and [DEC-PGOS-003](https://app.notion.com/p/4179320b90fb81b88be4fcdaf4154618) (PGOS governance-document review).
