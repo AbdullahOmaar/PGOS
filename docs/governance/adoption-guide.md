@@ -1,6 +1,6 @@
 # PGOS Adoption Guide
 
-**Status:** DRAFT | **Version:** 0.1.0
+**Status:** DRAFT | **Version:** 0.2.1
 
 PGOS is a framework, not a universal preset of every control for every project. Each adopting project must create its own profile.
 
