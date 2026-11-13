@@ -34,7 +34,7 @@ class ValidatorTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         changelog = (root / "CHANGELOG.md").read_text(encoding="utf-8")
         release = re.search(
-            r"^## (\\d+\\.\\d+\\.\\d+) — .* \\(DRAFT; not adopted\\)$",
+            r"^## (\d+\.\d+\.\d+) — .* \(DRAFT; not adopted\)$",
             changelog,
             re.MULTILINE,
         )
@@ -56,7 +56,7 @@ class ValidatorTests(unittest.TestCase):
         ]
         for relative_path in versioned_documents:
             content = (root / relative_path).read_text(encoding="utf-8")
-            match = re.search(r"^\\*\\*Version:\\*\\* (\\d+\\.\\d+\\.\\d+)", content, re.MULTILINE)
+            match = re.search(r"^\*\*Version:\*\* (\d+\.\d+\.\d+)", content, re.MULTILINE)
             self.assertIsNotNone(match, f"{relative_path} must declare a version")
             self.assertEqual(version, match.group(1), relative_path)
 
