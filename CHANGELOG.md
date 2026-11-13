@@ -5,6 +5,8 @@
 - Kept Owner adoption approval separate from maintainer self-review.
 - Preserved independent verification, security/privacy review and Release Authority for high-impact operational work.
 - Preserved GitHub provider-enforced PR/review rules; no merge or bypass is authorized.
+- Aligned README, versioned standards and the synthetic sample profile to the 0.2.1 draft version.
+- Added a regression test for package-version consistency and documented bounded provider-security evidence and residual control gaps.
 - Status remains DRAFT / not adopted.
 
 ## 0.2.0 — 2026-11-13 (DRAFT; not adopted)
