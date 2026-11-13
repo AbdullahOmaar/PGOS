@@ -1,6 +1,6 @@
 # Roles & Permission Boundaries
 
-**Status:** DRAFT | **Version:** 0.2.0
+**Status:** DRAFT | **Version:** 0.2.1
 
 Roles describe accountability, not automatic permissions.
 

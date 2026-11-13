@@ -1,6 +1,6 @@
 # Release, Verification & Closeout Standard
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.1 | **Class:** CONTROLLED
 
 ## Release Candidate packet
 - Exact source revision and artifact digest.

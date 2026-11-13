@@ -1,6 +1,6 @@
 # PGOS — Project Governance OS
 
-**Version:** 0.1.0  
+**Version:** 0.2.1  
 **Status:** DRAFT — Owner review required before adoption  
 **Purpose:** A portable, project-agnostic governance operating system for software, product, business, research, and automation projects.
 
@@ -24,8 +24,8 @@ See [`docs/governance/authority-model.md`](docs/governance/authority-model.md).
 ## Package contents
 
 - `docs/governance/` — charter, authority, roles, work orders, decisions, evidence and integrations.
-- `docs/security/` — risk, identity, data classification and security baseline.
-- `docs/release/` — release gates, rollback and live verification.
+- `docs/security/` — risk, identity, data classification, security baseline and provider evidence.
+- `docs/release/` — release gates, rollback, live verification and final-readiness evidence.
 - `docs/architecture/` — reusable architecture decision record standard.
 - `templates/` — machine-readable JSON starter records, including Project, WorkOrder, Decision, ChangeRequest, Handoff, Risk, Evidence, Incident and Release.
 - `scripts/validate_records.py` — dependency-free core record and cross-reference validator.

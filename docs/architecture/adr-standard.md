@@ -1,6 +1,6 @@
 # Architecture Decision Record (ADR) Standard
 
-**Status:** DRAFT | **Version:** 0.1.0
+**Status:** DRAFT | **Version:** 0.2.1
 
 Use one ADR per material architecture decision. Store the accepted ADR in the governed project's code repository; link the governance/approval record from Notion.
 

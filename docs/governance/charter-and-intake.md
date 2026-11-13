@@ -1,6 +1,6 @@
 # Project Charter & Intake Standard
 
-**Status:** DRAFT | **Version:** 0.1.0
+**Status:** DRAFT | **Version:** 0.2.1
 
 Define minimum identity, intent, accountability and constraints before execution planning.
 
