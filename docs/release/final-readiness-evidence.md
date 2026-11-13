@@ -57,7 +57,8 @@ PR [#5 — docs: reconcile final readiness evidence after merge](https://github.
 - PR #5 was squash-merged after explicit Owner authorization; merge commit and resulting main SHA: `ee9dda40c635470050c1bb73bc378edf59c1192a`.
 - PR #5 merge readback: `merged=true`, state `closed`; no reviewers were requested, consistent with the Owner direction to keep GitHub PR reviewer gates removed.
 - Exact latest-main check-runs at `ee9dda40c635470050c1bb73bc378edf59c1192a`: required `validate` SUCCESS, run [43369912822](https://github.com/AbdullahOmaar/PGOS/actions/runs/43369912822); CodeQL `Analyze (python)` SUCCESS, run [43369912837](https://github.com/AbdullahOmaar/PGOS/actions/runs/43369912837).
-- No new full-tree secret-pattern scan is claimed for `ee9dda40c635470050c1bb73bc378edf59c1192a`; the 44/44 zero-match result above remains tied to the earlier SHA `33f88e71ea15a85e2c90cf16e1c31311b1a1c9ff`.
+- Fresh bounded secret-pattern scan at exact latest main SHA `ee9dda40c635470050c1bb73bc378edf59c1192a`: recursive tree 58 entries / 44 blobs, not truncated; 44/44 blobs retrieved; zero matches across the ten documented pattern groups. This remains bounded pattern coverage, not an absolute guarantee or provider alert inventory.
+- Reachable history inventory returned 51 commits. The prior history scan covered 50 commits / 78 changed-file diffs; the latest main commit diff was additionally scanned against the same ten groups with zero matches. Unreachable objects and unenumerated refs are not covered.
 
 ## Provider posture and residual risks
 
