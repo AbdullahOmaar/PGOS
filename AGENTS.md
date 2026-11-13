@@ -17,11 +17,13 @@
 - Reuse the active branch/PR when appropriate. Never force-push.
 - Do not modify another project's policies or source files as a workaround.
 
-## Verification
+## Verification and review
 - Tie test and review evidence to the exact candidate revision and environment.
 - Distinguish IMPLEMENTED, TESTED, REVIEWED, ACCEPTED, MERGED, DEPLOYED and LIVE_VERIFIED.
 - Record NOT RUN, STALE, UNKNOWN and FAIL honestly.
 - Do not claim CI, review, deployment, database state, or runtime verification without evidence.
+- For the PGOS governance-document package only, a documented Project Master / maintainer self-review may satisfy the governance-document review gate under DEC-PGOS-003. Record exact SHA, complete changed paths, diff size, criteria checked, findings/dispositions, reviewer role and result. Owner adoption approval remains separate.
+- This exception does not waive independent verification, security/privacy review, or Release Authority for high-impact work. It does not bypass GitHub rulesets or authorize self-approval of A4 actions.
 
 ## Restricted actions
 - Merge, production deployment/write, destructive migrations, sensitive-data export, financial/legal effects, paid provisioning, and external communications require a separate action-specific approval.
