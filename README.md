@@ -1,6 +1,6 @@
 # PGOS — Project Governance OS
 
-**Version:** 0.1.0  
+**Version:** 0.2.1  
 **Status:** DRAFT — Owner review required before adoption  
 **Purpose:** A portable, project-agnostic governance operating system for software, product, business, research, and automation projects.
 
