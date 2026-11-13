@@ -1,6 +1,6 @@
 # Work Order & Delivery Lifecycle Standard
 
-**Status:** DRAFT | **Version:** 0.2.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.1 | **Class:** CONTROLLED
 
 ## Mandatory Work Order fields
 - Work Order ID, Project ID, title, revision and status.
