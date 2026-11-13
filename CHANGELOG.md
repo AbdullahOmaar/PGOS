@@ -4,7 +4,7 @@
 - Added DEC-PGOS-003: documented Project Master / maintainer self-review as the review method for the PGOS governance-document package.
 - Kept Owner adoption approval separate from maintainer self-review.
 - Preserved independent verification, security/privacy review and Release Authority for high-impact operational work.
-- Preserved existing GitHub provider-enforced PR/CI/branch-safety rules; no merge or bypass is authorized.
+- Preserved the GitHub PR/CI/branch-safety controls. PRs #4 and #5 were separately authorized by the Owner and merged; those historical authorizations do not grant standing permission for future merges, bypasses or deployments.
 - Aligned README, versioned standards and the synthetic sample profile to the 0.2.1 draft version.
 - Added a regression test for package-version consistency and documented bounded provider-security evidence and residual control gaps.
 - Status remains DRAFT / not adopted.
