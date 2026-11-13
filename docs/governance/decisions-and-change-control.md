@@ -1,6 +1,6 @@
 # Decisions, Change & Approval Control
 
-**Status:** DRAFT | **Version:** 0.2.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.1 | **Class:** CONTROLLED
 
 Each material decision contains Decision ID, Project ID, title, status, revision, context, options (including do nothing), chosen option and rationale, consequences, affected scope/contracts/systems, risks, decision owner, approvers, independent reviewer where needed, effective version, review date and supersession links.
 
