@@ -38,8 +38,8 @@ At base main SHA `7496cbf08a02f69dcc74360a5e4a8d76d7364851`:
 
 ### PR candidate
 
-- Candidate exact-head `validate`, CodeQL and other required checks: **PENDING / must be read back on the live PR head**.
-- New version-consistency regression test: **NOT YET VERIFIED on the candidate until its PR CI run completes**.
+- Candidate exact-head `validate`, CodeQL and GitGuardian results are dynamic; the authoritative state is the check-run list on the live PR #4 head. Do not copy a prior SHA's result or treat an in-progress run as PASS.
+- The first candidate run exposed a regression-test regex mismatch for headers where `Status` precedes `Version`. The test was corrected to accept both header forms. The corrected test is verified only when the current PR-head `validate` run passes.
 - Local execution in this runtime: **NOT RUN**; the repository's exact-head GitHub Actions workflow is the validation path for this batch.
 
 ## Open blockers and residual risks
