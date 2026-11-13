@@ -1,6 +1,6 @@
 # Notion, Linear & GitHub Integration Standard
 
-**Status:** DRAFT | **Version:** 0.1.0 | **Class:** CONTROLLED
+**Status:** DRAFT | **Version:** 0.2.1 | **Class:** CONTROLLED
 
 ## Notion
 Canonical for project charter, outcomes, scope, priorities, ownership, dependencies, Work Orders, decisions, approvals, risks, exceptions, acceptance and handoffs. Prefer one canonical record/database per record class and immutable IDs.
